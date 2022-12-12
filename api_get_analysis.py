@@ -34,10 +34,9 @@ def get_analysis(ticker,ticker_range):
             res_output.append({'date':datetime.fromtimestamp(timestamp[i]).date().strftime('%Y-%m-%d'),'move:':move[i]})
 
         res[ticker]=res_output
+    
     return res
 
- 
-    
-get_analysis('MSFT,F,CMG','3mo')
 
-
+result=get_analysis('MSFT,F,CMG','3mo')
+print(result)
